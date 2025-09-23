@@ -2,6 +2,7 @@ import { Badge } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { HeaderBascket } from "../../eCommerce";
 
 import styles from "./styles.module.css";
 const { headerContainer, headerLogo } = styles;
@@ -14,7 +15,7 @@ const Header = () => {
           <span>our</span>
           <Badge bg="info">Ecom</Badge>
         </h1>
-        {/* bascket */}
+        <HeaderBascket />
       </div>
       <Navbar
         expand="lg"
