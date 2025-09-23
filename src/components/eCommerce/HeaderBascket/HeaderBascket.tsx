@@ -7,7 +7,7 @@ const HeaderBascket = () => {
   return (
     <div>
       <div className={basketContainer}>
-        <Logo />
+        <Logo title="logo" />
         <div className={basketQuantity}>0</div>
       </div>
     </div>

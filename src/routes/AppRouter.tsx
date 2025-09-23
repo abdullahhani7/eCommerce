@@ -27,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "products/:prefix",
         element: <Products />,
+        loader: (params) => {
+          
+          return true;
+        },
       },
       {
         path: "about-us",
