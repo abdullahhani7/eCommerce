@@ -6,11 +6,15 @@ import Home from "@pages/Home";
 import Categories from "@pages/Categories";
 import Products from "@pages/Products";
 import AboutUs from "@pages/AboutUs";
+import Login from "@pages/Login";
+import Register from "@pages/Register";
+import ErrorPage from "@pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -27,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: "about-us",
         element: <AboutUs />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
       },
     ],
   },
