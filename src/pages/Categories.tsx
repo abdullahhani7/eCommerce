@@ -12,8 +12,10 @@ const Categories = () => {
   );
 
   useEffect(() => {
-    dispatch(actGetCategories());
-  }, [dispatch]);
+    if (!records.length) {
+      dispatch(actGetCategories());
+    }
+  }, [dispatch, records]);
 
   const categoriesList =
     records.length > 0
@@ -28,13 +30,10 @@ const Categories = () => {
           </Col>
         ))
       : "there are no categories to show";
- 
 
   return (
     <Container>
-      <Row>
-       {categoriesList}
-      </Row>
+      <Row>{categoriesList}</Row>
     </Container>
   );
 };
