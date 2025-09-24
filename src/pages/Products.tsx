@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
-import { actGetProductsByCatPrefix } from "@store/products/productsSlice";
+import {
+  actGetProductsByCatPrefix,
+  productsCleanUp,
+} from "@store/products/productsSlice";
 import { Container, Row, Col } from "react-bootstrap";
 import { Product } from "@components/eCommerce";
 const Products = () => {
@@ -11,9 +14,10 @@ const Products = () => {
 
   useEffect(() => {
     dispatch(actGetProductsByCatPrefix(params.prefix as string));
+    return () => {
+      dispatch(productsCleanUp());
+    };
   }, [dispatch, params]);
-
-
 
   const productsList =
     records.length > 0
@@ -29,12 +33,9 @@ const Products = () => {
         ))
       : "there are no categories to show";
 
-
   return (
     <Container>
-      <Row>
-       {productsList}
-      </Row>
+      <Row>{productsList}</Row>
     </Container>
   );
 };
