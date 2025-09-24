@@ -6,13 +6,11 @@
 }
 
 .productImg {
-  width: 100%;
   height: 180px;
   background-color: #f2f2f2;
 }
 .productImg img {
-  width: 100%;
-
+  height: 100%;
   display: block;
 }
 
