@@ -7,6 +7,7 @@ import {
 } from "@store/products/productsSlice";
 import { Container, Row, Col } from "react-bootstrap";
 import { Product } from "@components/eCommerce";
+import Loading from "@components/feedback/Loading/Loading";
 const Products = () => {
   const params = useParams();
   const dispatch = useAppDispatch();
@@ -35,7 +36,9 @@ const Products = () => {
 
   return (
     <Container>
-      <Row>{productsList}</Row>
+      <Loading loading={loading} error={error}>
+        <Row>{productsList}</Row>
+      </Loading>
     </Container>
   );
 };

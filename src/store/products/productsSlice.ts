@@ -29,11 +29,11 @@ const productsSlice = createSlice({
       state.error = null;
     });
     builder.addCase(actGetProductsByCatPrefix.fulfilled, (state, action) => {
-      state.loading = "pending";
+      state.loading = "succeeded";
       state.records = action.payload;
     });
     builder.addCase(actGetProductsByCatPrefix.rejected, (state, action) => {
-      state.loading = "pending";
+      state.loading = "failed";
       if (action.payload && typeof action.payload === "string") {
         state.error = action.payload;
       }

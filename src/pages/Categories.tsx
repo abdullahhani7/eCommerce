@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
 import { Category } from "@components/eCommerce";
+import Loading from "@components/feedback/Loading/Loading";
 
 const Categories = () => {
   const dispatch = useAppDispatch();
@@ -33,7 +34,9 @@ const Categories = () => {
 
   return (
     <Container>
-      <Row>{categoriesList}</Row>
+      <Loading loading={loading} error={error}>
+        <Row>{categoriesList}</Row>
+      </Loading>
     </Container>
   );
 };

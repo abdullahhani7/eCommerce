@@ -7,7 +7,6 @@ import store from "@store/index";
 import "./styles/global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
     <AppRouter />
