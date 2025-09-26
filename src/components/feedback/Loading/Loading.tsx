@@ -1,5 +1,4 @@
 import type { TLoading } from "@customTypes/shared";
-import type React from "react";
 
 type TLoadingProps = {
   loading: TLoading;
