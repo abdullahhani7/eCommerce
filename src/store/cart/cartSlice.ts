@@ -6,7 +6,7 @@ interface ICartState {
   productFullInfo: TProduct[];
 }
 
-const initialState = {
+const initialState: ICartState = {
   items: {},
   productFullInfo: [],
 };
