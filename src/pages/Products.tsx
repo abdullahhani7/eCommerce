@@ -8,11 +8,12 @@ import {
 import { Container } from "react-bootstrap";
 import { Product } from "@components/eCommerce";
 import Loading from "@components/feedback/Loading/Loading";
-import { GridList } from "@components/common";
+import { GridList, Heading } from "@components/common";
 import type { TProduct } from "@customTypes/product";
 
 const Products = () => {
   const params = useParams();
+
   const dispatch = useAppDispatch();
   const { records, loading, error } = useAppSelector((state) => state.products);
   const cartItems = useAppSelector((state) => state.cart.items);
@@ -30,6 +31,9 @@ const Products = () => {
 
   return (
     <Container>
+      <Heading>
+        <span className="text-capitalize">{params.prefix}</span> Products
+      </Heading>
       <Loading loading={loading} error={error}>
         <GridList<TProduct>
           records={productsFullInfo}
