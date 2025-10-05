@@ -24,7 +24,7 @@ const HeaderBascket = () => {
       setIsAnimate(false);
     }, 300);
 
-    return () => clearInterval(debounce);
+    return () => clearTimeout(debounce);
   }, [totalQuantity]);
 
   return (
