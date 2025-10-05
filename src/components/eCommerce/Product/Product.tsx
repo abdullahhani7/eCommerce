@@ -11,7 +11,7 @@ const Product = memo(({ id, title, price, img, max, quantity }: TProduct) => {
 
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
 
-  const currentRemainingQuantity = max - (quantity ?? 0);
+  const currentRemainingQuantity = (max ?? 0) - (quantity ?? 0);
   const quantityReachToMax = currentRemainingQuantity <= 0 ? true : false;
 
   useEffect(() => {
