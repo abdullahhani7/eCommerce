@@ -4,7 +4,8 @@ import Logo from "@assets/svg/cart.svg?react";
 import { getCartTotalQuantitySelector } from "@store/cart/cartSlice";
 
 import styles from "./styles.module.css";
-const { basketContainer, basketQuantity, pumpCartQuantity } = styles;
+const { basketContainer, basketQuantity, pumpCartQuantity, basketCart } =
+  styles;
 
 const HeaderBascket = () => {
   const [isAnimate, setIsAnimate] = useState(false);
@@ -30,8 +31,11 @@ const HeaderBascket = () => {
   return (
     <div>
       <div className={basketContainer}>
-        <Logo title="logo" />
-        <div className={quantityStyle}>{totalQuantity}</div>
+        <div className={basketCart}>
+          <Logo title="logo" />
+          <div className={quantityStyle}>{totalQuantity}</div>
+        </div>
+        <h3>Cart</h3>
       </div>
     </div>
   );
