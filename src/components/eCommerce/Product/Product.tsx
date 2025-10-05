@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useAppDispatch } from "@store/hooks";
 import type { TProduct } from "@customTypes/product";
 import { Button, Spinner } from "react-bootstrap";
@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 import { addToCart } from "@store/cart/cartSlice";
 const { product, productImg, maximumNotice } = styles;
 
-const Product = ({ id, title, price, img, max, quantity }: TProduct) => {
+const Product = memo(({ id, title, price, img, max, quantity }: TProduct) => {
   const dispatch = useAppDispatch();
 
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
@@ -60,6 +60,6 @@ const Product = ({ id, title, price, img, max, quantity }: TProduct) => {
       </Button>
     </div>
   );
-};
+});
 
 export default Product;
