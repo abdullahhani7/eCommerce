@@ -5,6 +5,7 @@ import { GridList } from "@components/common";
 import { Container } from "react-bootstrap";
 import { Category } from "@components/eCommerce";
 import Loading from "@components/feedback/Loading/Loading";
+import type { TCategory } from "@customTypes/category";
 
 const Categories = () => {
   const dispatch = useAppDispatch();
@@ -21,7 +22,7 @@ const Categories = () => {
   return (
     <Container>
       <Loading loading={loading} error={error}>
-        <GridList
+        <GridList<TCategory>
           records={records}
           renderItem={(record) => <Category {...record} />}
         />
