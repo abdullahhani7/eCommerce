@@ -8,6 +8,7 @@ const { cartItem, product, productImg, productInfo, cartItemSelection } =
 
 type CartItemProps = TProduct & {
   changeQuantityHandler: (id: number, quantity: number) => void;
+  removeItemHandler: (id: number) => void;
 };
 
 const CartItem = memo(
@@ -19,6 +20,7 @@ const CartItem = memo(
     max,
     quantity,
     changeQuantityHandler,
+    removeItemHandler,
   }: CartItemProps) => {
     // render option list
     const renderOptions = Array(max)
@@ -51,6 +53,7 @@ const CartItem = memo(
               variant="secondary"
               style={{ color: "white", width: "100px" }}
               className="mt-auto"
+              onClick={() => removeItemHandler(id)}
             >
               Remove
             </Button>

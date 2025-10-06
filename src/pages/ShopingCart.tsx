@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "@store/hooks";
 import {
   actGetProductsByItems,
   cartItemChangeQuantity,
+  cartItemRemove,
 } from "@store/cart/cartSlice";
 import Loading from "@components/feedback/Loading/Loading";
 
@@ -32,6 +33,13 @@ const ShopingCart = () => {
     [dispatch]
   );
 
+  const removeItemHandler = useCallback(
+    (id: number) => {
+      dispatch(cartItemRemove(id));
+    },
+    [dispatch]
+  );
+
   return (
     <>
       <Heading>Cart</Heading>
@@ -39,6 +47,7 @@ const ShopingCart = () => {
         <CartItemList
           products={products}
           changeQuantityHandler={changeQuantityHandler}
+          removeItemHandler={removeItemHandler}
         />
         <CartSubtotalPrice />
       </Loading>
