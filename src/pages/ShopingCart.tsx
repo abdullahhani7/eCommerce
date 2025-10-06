@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import {
   actGetProductsByItems,
@@ -25,9 +25,12 @@ const ShopingCart = () => {
     quantity: items[el.id],
   }));
 
-  const changeQuantityHandler = (id: number, quantity: number) => {
-    dispatch(cartItemChangeQuantity({ id, quantity }));
-  };
+  const changeQuantityHandler = useCallback(
+    (id: number, quantity: number) => {
+      dispatch(cartItemChangeQuantity({ id, quantity }));
+    },
+    [dispatch]
+  );
 
   return (
     <>
