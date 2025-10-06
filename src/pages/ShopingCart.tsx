@@ -49,7 +49,7 @@ const ShopingCart = () => {
           changeQuantityHandler={changeQuantityHandler}
           removeItemHandler={removeItemHandler}
         />
-        <CartSubtotalPrice />
+        <CartSubtotalPrice products={products} />
       </Loading>
     </>
   );
