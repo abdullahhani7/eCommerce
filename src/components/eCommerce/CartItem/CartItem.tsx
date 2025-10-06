@@ -5,9 +5,20 @@ import styles from "./styles.module.css";
 const { cartItem, product, productImg, productInfo, cartItemSelection } =
   styles;
 
-type CartItemProps = TProduct;
+type CartItemProps = TProduct & {
+  changeQuantityHandler: (id: number, quantity: number) => void;
+};
 
-const CartItem = ({ title, price, img, max, quantity }: CartItemProps) => {
+const CartItem = ({
+  id,
+  title,
+  price,
+  img,
+  max,
+  quantity,
+  changeQuantityHandler,
+}: CartItemProps) => {
+  // render option list
   const renderOptions = Array(max)
     .fill(0)
     .map((_, idx) => {
@@ -19,6 +30,11 @@ const CartItem = ({ title, price, img, max, quantity }: CartItemProps) => {
         </option>
       );
     });
+
+  const changeQuantity = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const quantity = +event.target.value;
+    changeQuantityHandler(id, quantity);
+  };
 
   return (
     <div className={cartItem}>
@@ -41,7 +57,9 @@ const CartItem = ({ title, price, img, max, quantity }: CartItemProps) => {
 
       <div className={cartItemSelection}>
         <span className="d-block mb-1">Quantity</span>
-        <Form.Select value={quantity}>{renderOptions}</Form.Select>
+        <Form.Select value={quantity} onChange={changeQuantity}>
+          {renderOptions}
+        </Form.Select>
       </div>
     </div>
   );

@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
-import { actGetProductsByItems } from "@store/cart/cartSlice";
+import {
+  actGetProductsByItems,
+  cartItemChangeQuantity,
+} from "@store/cart/cartSlice";
 import Loading from "@components/feedback/Loading/Loading";
 
 import { Heading } from "@components/common";
@@ -22,11 +25,18 @@ const ShopingCart = () => {
     quantity: items[el.id],
   }));
 
+  const changeQuantityHandler = (id: number, quantity: number) => {
+    dispatch(cartItemChangeQuantity({ id, quantity }));
+  };
+
   return (
     <>
       <Heading>Cart</Heading>
       <Loading loading={loading} error={error}>
-        <CartItemList products={products} />
+        <CartItemList
+          products={products}
+          changeQuantityHandler={changeQuantityHandler}
+        />
         <CartSubtotalPrice />
       </Loading>
     </>
