@@ -4,23 +4,29 @@ import { actGetProductsByItems } from "@store/cart/cartSlice";
 import Loading from "@components/feedback/Loading/Loading";
 
 import { Heading } from "@components/common";
-import { CartItem, CartSubtotalPrice } from "@components/eCommerce";
+import { CartItemList, CartSubtotalPrice } from "@components/eCommerce";
 
 const ShopingCart = () => {
   const dispatch = useAppDispatch();
-  const { items, loading, error } = useAppSelector((state) => state.cart);
+
+  const { items, productsFullInfo, loading, error } = useAppSelector(
+    (state) => state.cart
+  );
 
   useEffect(() => {
     dispatch(actGetProductsByItems());
   }, [dispatch]);
 
+  const products = productsFullInfo.map((el) => ({
+    ...el,
+    quantity: items[el.id],
+  }));
+
   return (
     <>
       <Heading>Cart</Heading>
       <Loading loading={loading} error={error}>
-        <CartItem />
-        <CartItem />
-        <CartItem />
+        <CartItemList products={products} />
         <CartSubtotalPrice />
       </Loading>
     </>
