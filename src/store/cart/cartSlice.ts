@@ -1,6 +1,7 @@
-import type { TProduct } from "@customTypes/product";
 import { createSlice } from "@reduxjs/toolkit";
 import { getCartTotalQuantitySelector } from "./selectors";
+import actGetProductsByItems from "./act/actGetProductsByItems";
+import type { TProduct } from "@customTypes/product";
 
 interface ICartState {
   items: { [key: number]: number };
@@ -27,6 +28,6 @@ const cartSlice = createSlice({
   },
 });
 
-export { getCartTotalQuantitySelector };
+export { getCartTotalQuantitySelector, actGetProductsByItems };
 export const { addToCart } = cartSlice.actions;
 export default cartSlice.reducer;
