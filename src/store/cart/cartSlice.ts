@@ -4,7 +4,7 @@ import actGetProductsByItems from "./act/actGetProductsByItems";
 import type { TProduct } from "@customTypes/product";
 
 interface ICartState {
-  items: { [key: number]: number };
+  items: { [key: string]: number };
   productFullInfo: TProduct[];
 }
 
