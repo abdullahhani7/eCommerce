@@ -1,10 +1,16 @@
 import { Heading } from "@components/common";
+import { CartItem } from "@components/eCommerce";
 
 const ShopingCart = () => {
   return (
-    <div>
+    <>
       <Heading>Cart</Heading>
-    </div>
+      <CartItem />
+      <CartItem />
+      <CartItem />
+      <CartItem />
+      <CartItem />
+    </>
   );
 };
 
