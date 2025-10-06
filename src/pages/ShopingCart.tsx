@@ -1,5 +1,5 @@
 import { Heading } from "@components/common";
-import { CartItem } from "@components/eCommerce";
+import { CartItem, CartSubtotalPrice } from "@components/eCommerce";
 
 const ShopingCart = () => {
   return (
@@ -8,8 +8,7 @@ const ShopingCart = () => {
       <CartItem />
       <CartItem />
       <CartItem />
-      <CartItem />
-      <CartItem />
+      <CartSubtotalPrice />
     </>
   );
 };
