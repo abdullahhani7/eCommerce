@@ -1,12 +1,15 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import { actGetProductsByItems } from "@store/cart/cartSlice";
+import Loading from "@components/feedback/Loading/Loading";
 
 import { Heading } from "@components/common";
 import { CartItem, CartSubtotalPrice } from "@components/eCommerce";
 
 const ShopingCart = () => {
   const dispatch = useAppDispatch();
+  const { items, loading, error } = useAppSelector((state) => state.cart);
+
   useEffect(() => {
     dispatch(actGetProductsByItems());
   }, [dispatch]);
@@ -14,10 +17,12 @@ const ShopingCart = () => {
   return (
     <>
       <Heading>Cart</Heading>
-      <CartItem />
-      <CartItem />
-      <CartItem />
-      <CartSubtotalPrice />
+      <Loading loading={loading} error={error}>
+        <CartItem />
+        <CartItem />
+        <CartItem />
+        <CartSubtotalPrice />
+      </Loading>
     </>
   );
 };
