@@ -32,7 +32,7 @@ const Products = () => {
   return (
     <Container>
       <Heading>
-        <span className="text-capitalize">{params.prefix}</span> Products
+        <span className="text-uppercase">{params.prefix}</span> Products
       </Heading>
       <Loading loading={loading} error={error}>
         <GridList<TProduct>
