@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import actLikeToggle from "./act/actLikeToggle";
 
 interface IWishlistState {
   itemsId: number[];
@@ -14,4 +15,5 @@ const wishlistSlice = createSlice({
   reducers: {},
 });
 
+export { actLikeToggle };
 export default wishlistSlice.reducer;
