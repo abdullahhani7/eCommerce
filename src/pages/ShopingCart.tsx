@@ -54,7 +54,7 @@ const ShopingCart = () => {
             <CartSubtotalPrice products={products} />
           </>
         ) : (
-          "Your cart is empty"
+          "Your Cart is empty"
         )}
       </Loading>
     </>

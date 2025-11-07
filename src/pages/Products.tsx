@@ -17,10 +17,7 @@ const Products = () => {
   const dispatch = useAppDispatch();
   const { records, loading, error } = useAppSelector((state) => state.products);
   const cartItems = useAppSelector((state) => state.cart.items);
-  const productsFullInfo = records.map((el) => ({
-    ...el,
-    quantity: cartItems[el.id] || 0,
-  }));
+  const wishlistItemsId = useAppSelector((state) => state.wishlist.itemsId);
 
   useEffect(() => {
     dispatch(actGetProductsByCatPrefix(params.prefix as string));
@@ -28,6 +25,12 @@ const Products = () => {
       dispatch(productsCleanUp());
     };
   }, [dispatch, params]);
+
+  const productsFullInfo = records.map((el) => ({
+    ...el,
+    quantity: cartItems[el.id] || 0,
+    isLiked: wishlistItemsId.includes(el.id),
+  }));
 
   return (
     <Container>
