@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "@layouts/MainLayout/MainLayout";
 // pages
 import Home from "@pages/Home";
+import Wishlist from "@pages/Wishlist";
 import ShopingCart from "@pages/ShopingCart";
 import Categories from "@pages/Categories";
 import Products from "@pages/Products";
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <ShopingCart />,
+      },
+      {
+        path: "wishlist",
+        element: <Wishlist />,
       },
       {
         path: "categories",
