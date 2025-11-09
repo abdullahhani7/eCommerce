@@ -1,49 +1,12 @@
-import { useCallback, useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "@store/hooks";
-import {
-  actGetProductsByItems,
-  cartItemChangeQuantity,
-  cartItemRemove,
-  cleanCartProductsFullInfo,
-} from "@store/cart/cartSlice";
+import useCart from "@hooks/useCart";
 import Loading from "@components/feedback/Loading/Loading";
 
 import { Heading } from "@components/common";
 import { CartItemList, CartSubtotalPrice } from "@components/eCommerce";
 
-const ShopingCart = () => {
-  const dispatch = useAppDispatch();
-
-  const { items, productsFullInfo, loading, error } = useAppSelector(
-    (state) => state.cart
-  );
-
-  useEffect(() => {
-    dispatch(actGetProductsByItems());
-
-    return () => {
-      dispatch(cleanCartProductsFullInfo());
-    };
-  }, [dispatch]);
-
-  const products = productsFullInfo.map((el) => ({
-    ...el,
-    quantity: items[el.id],
-  }));
-
-  const changeQuantityHandler = useCallback(
-    (id: number, quantity: number) => {
-      dispatch(cartItemChangeQuantity({ id, quantity }));
-    },
-    [dispatch]
-  );
-
-  const removeItemHandler = useCallback(
-    (id: number) => {
-      dispatch(cartItemRemove(id));
-    },
-    [dispatch]
-  );
+const Cart = () => {
+  const { loading, error, products, changeQuantityHandler, removeItemHandler } =
+    useCart();
 
   return (
     <>
@@ -66,4 +29,4 @@ const ShopingCart = () => {
   );
 };
 
-export default ShopingCart;
+export default Cart;
