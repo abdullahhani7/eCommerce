@@ -1,5 +1,8 @@
 import { useAppDispatch, useAppSelector } from "@store/hooks";
-import { actGetCategories } from "@store/categories/categoriesSlice";
+import {
+  actGetCategories,
+  cleanUpCategoriesRecords,
+} from "@store/categories/categoriesSlice";
 import { useEffect } from "react";
 import { GridList, Heading } from "@components/common";
 import { Container } from "react-bootstrap";
@@ -14,10 +17,12 @@ const Categories = () => {
   );
 
   useEffect(() => {
-    if (!records.length) {
-      dispatch(actGetCategories());
-    }
-  }, [dispatch, records]);
+    dispatch(actGetCategories());
+
+    return () => {
+      dispatch(cleanUpCategoriesRecords());
+    };
+  }, [dispatch]);
 
   return (
     <Container>
