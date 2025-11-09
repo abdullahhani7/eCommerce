@@ -4,7 +4,7 @@ import MainLayout from "@layouts/MainLayout/MainLayout";
 // pages
 import Home from "@pages/Home";
 import Wishlist from "@pages/Wishlist";
-import ShopingCart from "@pages/ShopingCart";
+import Cart from "@pages/Cart";
 import Categories from "@pages/Categories";
 import Products from "@pages/Products";
 import AboutUs from "@pages/AboutUs";
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "cart",
-        element: <ShopingCart />,
+        element: <Cart />,
       },
       {
         path: "wishlist",
