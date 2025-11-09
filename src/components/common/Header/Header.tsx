@@ -1,24 +1,14 @@
 import { NavLink } from "react-router-dom";
-import HeaderCounter from "./HeaderCounter/HeaderCounter";
-import { useAppSelector } from "@store/hooks";
-import { getCartTotalQuantitySelector } from "@store/cart/cartSlice";
-
-import WishlistIcon from "@assets/svg/wishlist.svg?react";
-import CartIcon from "@assets/svg/cart.svg?react";
-
-import { Badge } from "react-bootstrap";
+import HeaderLeftBar from "./HeaderLeftBar/HeaderLeftBar";
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Badge } from "react-bootstrap";
+import Nav from "react-bootstrap/Nav";
 
 import styles from "./styles.module.css";
-const { headerContainer, headerLogo, headerLeftBar } = styles;
+const { headerContainer, headerLogo } = styles;
 
 const Header = () => {
-  const wishlistTotalQuantity = useAppSelector(
-    (state) => state.wishlist.itemsId.length
-  );
-  const CartTotalQuantity = useAppSelector(getCartTotalQuantitySelector);
   return (
     <header>
       <div className={headerContainer}>
@@ -26,20 +16,7 @@ const Header = () => {
           <span>our</span>
           <Badge bg="info">Ecom</Badge>
         </h1>
-        <div className={headerLeftBar}>
-          <HeaderCounter
-            to="wishlist"
-            totalQuantity={wishlistTotalQuantity}
-            svgIcon={<WishlistIcon title="wishlist" />}
-            title="Wislist"
-          />
-          <HeaderCounter
-            to="cart"
-            totalQuantity={CartTotalQuantity}
-            svgIcon={<CartIcon title="cart" />}
-            title="Cart"
-          />
-        </div>
+        <HeaderLeftBar />
       </div>
       <Navbar
         expand="lg"
