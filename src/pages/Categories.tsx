@@ -1,9 +1,4 @@
-import { useAppDispatch, useAppSelector } from "@store/hooks";
-import {
-  actGetCategories,
-  cleanUpCategoriesRecords,
-} from "@store/categories/categoriesSlice";
-import { useEffect } from "react";
+import useCategories from "@hooks/useCategories";
 import { GridList, Heading } from "@components/common";
 import { Container } from "react-bootstrap";
 import { Category } from "@components/eCommerce";
@@ -11,18 +6,7 @@ import Loading from "@components/feedback/Loading/Loading";
 import type { TCategory } from "@customTypes/category";
 
 const Categories = () => {
-  const dispatch = useAppDispatch();
-  const { records, loading, error } = useAppSelector(
-    (state) => state.categories
-  );
-
-  useEffect(() => {
-    dispatch(actGetCategories());
-
-    return () => {
-      dispatch(cleanUpCategoriesRecords());
-    };
-  }, [dispatch]);
+  const { records, loading, error } = useCategories();
 
   return (
     <Container>
