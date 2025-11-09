@@ -47,7 +47,7 @@ const ShopingCart = () => {
 
   return (
     <>
-      <Heading>Cart</Heading>
+      <Heading title="Your Cart" />
       <Loading loading={loading} error={error}>
         {products.length ? (
           <>

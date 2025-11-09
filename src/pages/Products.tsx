@@ -34,9 +34,7 @@ const Products = () => {
 
   return (
     <Container>
-      <Heading>
-        <span className="text-uppercase">{params.prefix}</span> Products
-      </Heading>
+      <Heading title={` ${params.prefix?.toUpperCase()} Products`}></Heading>
       <Loading loading={loading} error={error}>
         <GridList<TProduct>
           records={productsFullInfo}
