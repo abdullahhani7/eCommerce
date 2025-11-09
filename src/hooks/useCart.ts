@@ -15,10 +15,11 @@ const useCart = () => {
   );
 
   useEffect(() => {
-    dispatch(actGetProductsByItems());
+    const promise = dispatch(actGetProductsByItems());
 
     return () => {
       dispatch(cleanCartProductsFullInfo());
+      promise.abort();
     };
   }, [dispatch]);
 

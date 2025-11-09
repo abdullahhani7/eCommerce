@@ -16,9 +16,12 @@ const useProducts = () => {
   const wishlistItemsId = useAppSelector((state) => state.wishlist.itemsId);
 
   useEffect(() => {
-    dispatch(actGetProductsByCatPrefix(params.prefix as string));
+    const promise = dispatch(
+      actGetProductsByCatPrefix(params.prefix as string)
+    );
     return () => {
       dispatch(cleanUpProductsRecords());
+      promise.abort();
     };
   }, [dispatch, params]);
 
