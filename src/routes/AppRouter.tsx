@@ -11,7 +11,7 @@ const Products = lazy(() => import("@pages/Products"));
 const AboutUs = lazy(() => import("@pages/AboutUs"));
 const Login = lazy(() => import("@pages/Login"));
 const Register = lazy(() => import("@pages/Register"));
-const ErrorPage = lazy(() => import("@pages/ErrorPage"));
+const ErrorPage = lazy(() => import("@pages/Error"));
 
 const router = createBrowserRouter([
   {
