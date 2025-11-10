@@ -1,3 +1,4 @@
+import CategorySkeleton from "../skeletons/CategorySkeleton/CategorySkeleton";
 import type { TLoading } from "@customTypes/shared";
 
 type TLoadingProps = {
@@ -8,7 +9,7 @@ type TLoadingProps = {
 
 const Loading = ({ loading, error, children }: TLoadingProps) => {
   if (loading === "pending") {
-    return <p>loading please wait...</p>;
+    return <CategorySkeleton />;
   }
   if (loading === "failed") {
     return <p>{error}</p>;
