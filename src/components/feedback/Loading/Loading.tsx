@@ -3,6 +3,7 @@ import ProductSkeleton from "../skeletons/ProductSkeleton/ProductSkeleton";
 import CartSkeleton from "../skeletons/CartSkeleton/CartSkeleton";
 
 import type { TLoading } from "@customTypes/shared";
+import LottieHandler from "../LottieHandler/LottieHandler";
 
 const skeletonsTypes = {
   category: CategorySkeleton,
@@ -29,7 +30,11 @@ const Loading = ({
     return <Component />;
   }
   if (loading === "failed") {
-    return <p>{error}</p>;
+    return (
+      <div>
+        <LottieHandler type="error" message={error as string} />
+      </div>
+    );
   }
 
   return <div>{children}</div>;
