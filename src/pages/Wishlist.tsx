@@ -11,7 +11,7 @@ const Wishlist = () => {
   return (
     <>
       <Heading title="Your Wishlist" />
-      <Loading loading={loading} error={error}>
+      <Loading loading={loading} error={error} type="product">
         <GridList<TProduct>
           records={records}
           renderItem={(record) => <Product {...record} />}
