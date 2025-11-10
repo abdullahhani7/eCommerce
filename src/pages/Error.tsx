@@ -1,20 +1,11 @@
-import Lottie from "lottie-react";
-import notFound from "@assets/lottieFiles/notFound.json";
-
+import LottieHandler from "@components/feedback/LottieHandler/LottieHandler";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
 const Error = () => {
   return (
     <Container className="d-flex flex-colum align-items-center">
-      <Lottie
-        animationData={notFound}
-        style={{ width: "400" }}
-        loop={false}
-        onComplete={() => {
-          console.log("fire");
-        }}
-      />
+      <LottieHandler type="notFound"/>
       <Link to="/" replace={true}>
         How about going back to safety?
       </Link>
