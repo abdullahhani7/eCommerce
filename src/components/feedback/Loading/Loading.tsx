@@ -14,7 +14,7 @@ type TLoadingProps = {
   loading: TLoading;
   error: string | null;
   children: React.ReactNode;
-  type: "cart" | "category" | "product";
+  type?: keyof typeof skeletonsTypes;
 };
 
 const Loading = ({
