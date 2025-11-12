@@ -1,12 +1,16 @@
+import { useAppDispatch, useAppSelector } from "@store/hooks";
+import actAuthRegister from "@store/auth/act/actAuthRegister";
+
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signUpSchema, type signUpType } from "@validations/signUpSchema";
 import useCheckEmailAvailability from "@hooks/useCheckEmailAvailability";
 import { Heading } from "@components/common";
 import { Input } from "@components/Form";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Button, Row, Col, Spinner } from "react-bootstrap";
 
 const Register = () => {
+  const dispatch = useAppDispatch();
   const {
     register,
     handleSubmit,
@@ -19,8 +23,10 @@ const Register = () => {
   });
 
   const submitForm: SubmitHandler<signUpType> = (data) => {
-    console.log(data);
+    const { firstName, lastName, email, password } = data;
+    dispatch(actAuthRegister({ firstName, lastName, email, password }));
   };
+  const { loading, error } = useAppSelector((state) => state.auth);
 
   const {
     emailAvailabilityStatus,
@@ -108,8 +114,17 @@ const Register = () => {
               style={{ color: "white" }}
               disabled={emailAvailabilityStatus === "checking" ? true : false}
             >
-              Submit
+              {loading === "pending" ? (
+                <>
+                  <Spinner animation="border" size="sm"></Spinner> Loading...
+                </>
+              ) : (
+                "Submit"
+              )}
             </Button>
+            {error && (
+              <p style={{ color: "#DC3545", marginTop: "10px" }}>{error}</p>
+            )}
           </Form>
         </Col>
       </Row>
