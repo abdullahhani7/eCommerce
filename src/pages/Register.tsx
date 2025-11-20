@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import actAuthRegister from "@store/auth/act/actAuthRegister";
+import { useNavigate } from "react-router-dom";
 
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -10,6 +11,7 @@ import { Input } from "@components/Form";
 import { Form, Button, Row, Col, Spinner } from "react-bootstrap";
 
 const Register = () => {
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const {
     register,
@@ -22,9 +24,13 @@ const Register = () => {
     resolver: zodResolver(signUpSchema),
   });
 
-  const submitForm: SubmitHandler<signUpType> = (data) => {
+  const submitForm: SubmitHandler<signUpType> = async (data) => {
     const { firstName, lastName, email, password } = data;
-    dispatch(actAuthRegister({ firstName, lastName, email, password }));
+    dispatch(actAuthRegister({ firstName, lastName, email, password }))
+      .unwrap()
+      .then(() => {
+        navigate("/login");
+      });
   };
   const { loading, error } = useAppSelector((state) => state.auth);
 
