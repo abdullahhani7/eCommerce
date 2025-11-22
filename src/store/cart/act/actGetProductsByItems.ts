@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import type { RootState } from "@store/index";
-import { api } from "src/api";
+import { api } from "@services/api";
 import type { TProduct } from "@customTypes/product";
 import axiosErrorHandler from "@util/axiosErrorHandler";
 

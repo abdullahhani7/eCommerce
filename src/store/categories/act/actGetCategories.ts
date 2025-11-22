@@ -1,4 +1,4 @@
-import { api } from "src/api";
+import { api } from "@services/api";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import type { TCategory } from "@customTypes/category";
 import axiosErrorHandler from "@util/axiosErrorHandler";
