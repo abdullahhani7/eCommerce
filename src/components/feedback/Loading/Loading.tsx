@@ -1,14 +1,16 @@
 import CategorySkeleton from "../skeletons/CategorySkeleton/CategorySkeleton";
 import ProductSkeleton from "../skeletons/ProductSkeleton/ProductSkeleton";
 import CartSkeleton from "../skeletons/CartSkeleton/CartSkeleton";
+import TableSkeleton from "../skeletons/TableSkeleton/TableSkeleton";
 
-import type { TLoading } from "@customTypes/shared";
 import LottieHandler from "../LottieHandler/LottieHandler";
+import type { TLoading } from "@customTypes/shared";
 
 const skeletonsTypes = {
   category: CategorySkeleton,
   product: ProductSkeleton,
   cart: CartSkeleton,
+  table: TableSkeleton,
 };
 
 type TLoadingProps = {
