@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { api } from "src/api";
 import axiosErrorHandler from "@util/axiosErrorHandler";
 import type { RootState } from "@store/index";
 
@@ -18,7 +18,7 @@ const actPlaceOrder = createAsyncThunk(
     }));
 
     try {
-      const res = await axios.post("/orders", {
+      const res = await api.post("/orders", {
         userId: auth.user?.id,
         items: orderItems,
         subtotal,

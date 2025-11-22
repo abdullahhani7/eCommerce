@@ -1,6 +1,6 @@
+import { api } from "src/api";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import type { TProduct } from "@customTypes/product";
-import axios from "axios";
+import type { TProduct } from "@customTypes/product"; 
 import axiosErrorHandler from "@util/axiosErrorHandler";
 
 type TResponse = TProduct[];
@@ -11,7 +11,7 @@ const actGetProductsByCatPrefix = createAsyncThunk(
     const { rejectWithValue, signal } = thunkAPI;
 
     try {
-      const response = await axios.get<TResponse>(
+      const response = await api.get<TResponse>(
         `/products?cat_prefix=${prefix}`,
         { signal }
       );
