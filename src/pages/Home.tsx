@@ -1,6 +1,5 @@
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import {
-  Button,
   Card,
   CardContent,
   CardMedia,
@@ -90,9 +89,15 @@ const MoviesList = () => {
     },
   ];
 
+  const images2 = [
+    "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvdGhpbmd8ZW58MHx8MHx8fDA%3D",
+    "https://plus.unsplash.com/premium_photo-1679056835084-7f21e64a3402?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2xvdGhpbmd8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1569313717948-f797bcbf00db?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D",
+  ];
+
   return (
     <>
-      <Container maxWidth="lg" sx={{ marginTop: "2rem", marginBottom:"8rem" }}>
+      <Container maxWidth="lg" sx={{ marginTop: "0rem", marginBottom: "8rem" }}>
         <Carousel
           autoPlay
           responsive={upcomingMoviesResponsive}
@@ -101,7 +106,7 @@ const MoviesList = () => {
           {images.map((images) => (
             <CardMedia
               component="img"
-              sx={{ height: 500 }}
+              sx={{ height: 550 }}
               image={images.image}
               alt={"image.title"}
               style={{
@@ -125,7 +130,7 @@ const MoviesList = () => {
           Explore Categories
         </Typography>
 
-        <Carousel autoPlay responsive={responsive} infinite={true} >
+        <Carousel autoPlay responsive={responsive} infinite={true}>
           {records.map((record) => (
             <Link
               to={`/categories/products/${record.prefix}`}
@@ -154,6 +159,7 @@ const MoviesList = () => {
             </Link>
           ))}
         </Carousel>
+
         {/* <div
           style={{
             display: "flex",
@@ -166,33 +172,105 @@ const MoviesList = () => {
           </Link>
         </div> */}
 
-        {/* <Typography variant="h4" gutterBottom>
-          Featured Films
+        {/* <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+          <Card sx={{ marginTop: "1rem" , display:"flex",justifyContent:"space-around"  }}>
+            <CardMedia
+              component="img"
+              sx={{ height: 300 }}
+              image={
+                "https://www.mavin-wear.com/cdn/shop/files/21_67089214-8049-4efc-84f5-d954e35cace0.jpg?v=1763497518&width=2160"
+              }
+            />
+            <CardMedia
+              component="img"
+              sx={{ height: 300 }}
+              image={
+                "https://www.mavin-wear.com/cdn/shop/files/21_67089214-8049-4efc-84f5-d954e35cace0.jpg?v=1763497518&width=2160"
+              }
+            />
+            <CardMedia
+              component="img"
+              sx={{ height: 300 }}
+              image={
+                "https://www.mavin-wear.com/cdn/shop/files/21_67089214-8049-4efc-84f5-d954e35cace0.jpg?v=1763497518&width=2160"
+              }
+            />
+          </Card>
+        </div> */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: "2rem",
+            marginTop: "9rem",
+            marginBottom: "9rem",
+          }}
+        >
+          {images2.map((url, index) => (
+            <Card
+              key={index}
+              sx={{
+                width: { xs: "100%", sm: 350 },
+                height: 250,
+                borderRadius: 10,
+                overflow: "hidden",
+              }}
+            >
+              <CardMedia
+                component="img"
+                image={url}
+                alt={`Clothing ${index + 1}`}
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover", // عشان الصورة تغطي المساحة
+                }}
+              />
+            </Card>
+          ))}
+        </div>
+
+        {/* <Typography
+          variant="h4"
+          fontWeight="bold"
+          align="center"
+          sx={{ mt: 5, mb: 3 }}
+          gutterBottom
+        >
+          New Arrival
         </Typography>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-          {records.map((movie) => (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: "1rem",
+          }}
+        >
+          {records.map((record) => (
             <Link
-              to={`/movies/${movie.id}`}
-              key={movie.id}
+              to={`/movies/${record.id}`}
+              key={record.id}
               style={{ textDecoration: "none" }}
             >
               <Card sx={{ marginTop: "1rem" }}>
                 <CardMedia
                   component="img"
-                  sx={{ height: 300 }}
-                  image={movie.img}
+                  sx={{ width: { sm: 250 }, height: 300 }}
+                  image={record.img}
                 />
 
                 <CardContent>
                   <Typography variant="h6" component="div">
-                    {movie.title}
+                    {record.title}
                   </Typography>
                 </CardContent>
               </Card>
             </Link>
           ))}
-        </div>
-        <div
+        </div> */}
+        {/* <div
           style={{
             display: "flex",
             justifyContent: "flex-end",
