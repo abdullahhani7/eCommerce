@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Banner = () => {
   return (
-    <div className=" w-full pt-5">
+    <div className=" w-full pt-2">
       <div className="lg:container mx-auto">
         <div className="flex items-center justify-between gap-6 max-h-[756px] h-full">
           {/* left side  */}
