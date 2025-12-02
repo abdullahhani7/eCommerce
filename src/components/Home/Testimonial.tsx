@@ -1,10 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import { Navigation } from "swiper/modules";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import "swiper/css";
 import "swiper/css/navigation";
+
 import { useRef } from "react";
 import { FaStar } from "react-icons/fa";
+import type { NavigationOptions } from "swiper/types";
 
 const Testimonial = () => {
   const prevRef = useRef(null);
@@ -32,7 +35,7 @@ const Testimonial = () => {
     <div className="w-full min-h-[840px] h-full bg-[#fafafa] overflow-hidden pt-[100px] pb-[58px]">
       <div className="lg:container mx-auto">
         {/* header title  */}
-        <div className="w-full flex flex-col items-center mb-[80px]">
+        <div className="w-full flex flex-col items-center mb-20">
           <h3 className="text-5xl text-[#484848] font-normal capitalize mb-5">
             this is what our customers say
           </h3>
@@ -49,7 +52,7 @@ const Testimonial = () => {
             <div>
               <button
                 ref={prevRef}
-                className="w-[48px] h-[48px] bg-white shadow flex items-center justify-center border-[1px] border-[#8a8a8a] rounded-full cursor-pointer"
+                className="w-12 h-12 bg-white shadow flex items-center justify-center border  border-[#8a8a8a] rounded-full cursor-pointer"
               >
                 <IoIosArrowBack size={"1.8rem"} />
               </button>
@@ -57,7 +60,7 @@ const Testimonial = () => {
             <div>
               <button
                 ref={nextRef}
-                className="w-[48px] h-[48px] bg-white shadow flex items-center justify-center border-[1px] border-[#8a8a8a] rounded-full cursor-pointer"
+                className="w-12 h-12 bg-white shadow flex items-center justify-center border  border-[#8a8a8a] rounded-full cursor-pointer"
               >
                 <IoIosArrowForward size={"1.8rem"} />
               </button>
@@ -71,8 +74,9 @@ const Testimonial = () => {
               nextEl: nextRef.current,
             }}
             onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
+              const nav = swiper.params.navigation as NavigationOptions; // ✅ type assertion
+              nav.prevEl = prevRef.current;
+              nav.nextEl = nextRef.current;
             }}
             breakpoints={breakpoints}
           >
@@ -91,7 +95,7 @@ const Testimonial = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
                     facere illum nostrum, repellat totam animi?
                   </p>
-                  <span className="flex items-center gap-1.5 pb-5 border-b-[1px] border-[#484848] max-w-[230px] w-full">
+                  <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
                       <FaStar key={index} size={"1.5rem"} color="#fca120" />
                     ))}
@@ -120,7 +124,7 @@ const Testimonial = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
                     facere illum nostrum, repellat totam animi?
                   </p>
-                  <span className="flex items-center gap-1.5 pb-5 border-b-[1px] border-[#484848] max-w-[230px] w-full">
+                  <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
                       <FaStar key={index} size={"1.5rem"} color="#fca120" />
                     ))}
@@ -149,7 +153,7 @@ const Testimonial = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
                     facere illum nostrum, repellat totam animi?
                   </p>
-                  <span className="flex items-center gap-1.5 pb-5 border-b-[1px] border-[#484848] max-w-[230px] w-full">
+                  <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
                       <FaStar key={index} size={"1.5rem"} color="#fca120" />
                     ))}
@@ -178,7 +182,7 @@ const Testimonial = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
                     facere illum nostrum, repellat totam animi?
                   </p>
-                  <span className="flex items-center gap-1.5 pb-5 border-b-[1px] border-[#484848] max-w-[230px] w-full">
+                  <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
                       <FaStar key={index} size={"1.5rem"} color="#fca120" />
                     ))}
@@ -207,7 +211,7 @@ const Testimonial = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
                     facere illum nostrum, repellat totam animi?
                   </p>
-                  <span className="flex items-center gap-1.5 pb-5 border-b-[1px] border-[#484848] max-w-[230px] w-full">
+                  <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
                       <FaStar key={index} size={"1.5rem"} color="#fca120" />
                     ))}
@@ -236,7 +240,7 @@ const Testimonial = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
                     facere illum nostrum, repellat totam animi?
                   </p>
-                  <span className="flex items-center gap-1.5 pb-5 border-b-[1px] border-[#484848] max-w-[230px] w-full">
+                  <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
                       <FaStar key={index} size={"1.5rem"} color="#fca120" />
                     ))}
@@ -265,7 +269,7 @@ const Testimonial = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
                     facere illum nostrum, repellat totam animi?
                   </p>
-                  <span className="flex items-center gap-1.5 pb-5 border-b-[1px] border-[#484848] max-w-[230px] w-full">
+                  <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
                       <FaStar key={index} size={"1.5rem"} color="#fca120" />
                     ))}
@@ -294,7 +298,7 @@ const Testimonial = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
                     facere illum nostrum, repellat totam animi?
                   </p>
-                  <span className="flex items-center gap-1.5 pb-5 border-b-[1px] border-[#484848] max-w-[230px] w-full">
+                  <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
                       <FaStar key={index} size={"1.5rem"} color="#fca120" />
                     ))}

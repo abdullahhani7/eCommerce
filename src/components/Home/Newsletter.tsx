@@ -25,13 +25,13 @@ const Newsletter = () => {
 
             <form className="w-full flex flex-col gap-6">
               <input
-                className="w-full h-[56px] bg-[#d9d9d9] rounded-sm shadow pl-3 outline-none"
+                className="w-full h-14 bg-[#d9d9d9] rounded-sm shadow pl-3 outline-none"
                 type="text"
                 placeholder="demo@gmail.com"
               />
               <button
                 type="button"
-                className="text-xl text-white font-medium font-poppins capitalize px-8 py-2.5 bg-black rounded-lg max-w-[207px] w-full h-[56px] flex items-center justify-center cursor-pointer mx-auto"
+                className="text-xl text-white font-medium font-poppins capitalize px-8 py-2.5 bg-black rounded-lg max-w-[207px] w-full h-14 flex items-center justify-center cursor-pointer mx-auto"
               >
                 Subscribe
               </button>

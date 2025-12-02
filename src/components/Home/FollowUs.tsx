@@ -1,4 +1,3 @@
-import React from 'react';
 
 const FollowUs = () => {
 
@@ -52,7 +51,7 @@ const FollowUs = () => {
         <div className='w-full pb-[150px]'>
 
             {/* header title  */}
-            <div className='w-full flex flex-col items-center mb-[80px]'>
+            <div className='w-full flex flex-col items-center mb-20'>
                 <h3 className='text-5xl text-[#484848] font-normal capitalize mb-5'>follow us on instagram</h3>
                 <p className='text-base text-[#8a8a8a] font-poppins font-normal max-w-[614px] w-full'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit qui nulla iste laboriosam velit reiciendis veniam laudantium mollitia, animi ea.</p>
             </div>

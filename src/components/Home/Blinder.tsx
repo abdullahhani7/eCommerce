@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { FaAward } from "react-icons/fa";
