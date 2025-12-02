@@ -1,67 +1,69 @@
-import { useAppSelector } from "@store/hooks";
-import styles from "./styles.module.css";
-import { useTranslation } from "react-i18next";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
-  const theme = useAppSelector((state) => state.theme.mode);
-  const { t } = useTranslation();
-
   return (
-    <footer
-      className={styles.footerContainer}
-      style={{
-        backgroundColor: theme === "dark" ? "#1a1a1a" : "#f7f7fa",
-        color: theme === "dark" ? "#fff" : "#000",
-        padding: "2rem 1rem",
-        textAlign: "center",
-      }}
-    >
-      <div className={styles.footerLinks}>
-        <a href="/">{t("aboutus")}</a>
-        <a href="/">{t("contact")}</a>
-        <a href="/">{t("terms")}</a>
-        <a href="/">{t("privacy")}</a>
-      </div>
+    <div className="  w-full bg-white pt-[30px] pb-[20px] border-t-[1px] border-[#d9d9d9]">
+      <div className="lg:container mx-auto">
+        <div className="flex items-center justify-between pb-6">
+          {/* logo wrapper  */}
+          <div className="logo_wrapper ">
+            <Link to={"/"} className=" no-underline!"> 
+              <h3 className="text-[2rem]! text-[#484848]!   font-normal!     no-underline!">
+                Our eCom
+              </h3>
+            </Link>
+          </div>
 
-      <div className={styles.socialIcons}>
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaFacebook size={24} />
-        </a>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaInstagram size={24} />
-        </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <FaTwitter size={24} />
-        </a>
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin size={24} />
-        </a>
-      </div>
+          {/* navbar wrapper  */}
+          <div>
+            <nav className="flex items-center gap-[3.5rem]">
+              <NavLink
+                to={"/"}
+                className="text-base text-[#484848]! capitalize! font-normal! font-poppins! no-underline !no-underline"
+              >
+                support center
+              </NavLink>
+              <NavLink
+                to={"/"}
+                className="text-base text-[#484848]! capitalize! font-normal! font-poppins! no-underline !no-underline"
+              >
+                invoicing
+              </NavLink>
+              <NavLink
+                to={"/"}
+                className="text-base text-[#484848]! capitalize! font-normal! font-poppins! no-underline !no-underline"
+              >
+                contact
+              </NavLink>
+              <NavLink
+                to={"/"}
+                className="text-base text-[#484848]! capitalize! font-normal! font-poppins! no-underline !no-underline"
+              >
+                careers
+              </NavLink>
+              <NavLink
+                to={"/"}
+                className="text-base text-[#484848]! capitalize! font-normal! font-poppins! no-underline !no-underline"
+              >
+                blog
+              </NavLink>
+              <NavLink
+                to={"/"}
+                className="text-base text-[#484848]! capitalize! font-normal! font-poppins! no-underline !no-underline"
+              >
+                FAQs
+              </NavLink>
+            </nav>
+          </div>
+        </div>
 
-      <div className={styles.newsletter}>
-        <p>{t("Subscribe to our Newsletter for the latest deals")}</p>
-        <input type="email" placeholder={t("Enter your email")} />
-        <button>{t("subscribe")}</button>
+        <div className="flex items-center justify-center">
+          <p className="text-sm text-[#484848] font-poppins font-normal">
+            Copyright &copy; 20250 Our eCom. All Rights Reserved
+          </p>
+        </div>
       </div>
-
-      <p className={styles.copyright}>
-        &copy; {new Date().getFullYear()}{" "}
-        {t("All rights reserved. Your eCommerce Brand")}
-      </p>
-    </footer>
+    </div>
   );
 };
 
