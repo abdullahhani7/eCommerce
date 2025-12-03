@@ -48,67 +48,66 @@ const Blinder = () => {
         </div>
       </div>
 
-      <div className="w-full bg-white min-h-[200px] h-full flex items-center justify-center shadow-lg">
+      <div className="w-full bg-white min-h-[200px] h-full hidden md:flex items-center justify-center shadow-lg">
         <div className="lg:container mx-auto">
           {/* bottom wrapper  */}
           <div className="flex flex-wrap items-center justify-between gap-6">
-  <div className="flex items-center gap-3">
-    <button>
-      <FaHandHoldingHeart className="text-black text-4xl sm:text-5xl" />
-    </button>
-    <div>
-      <h4 className="text-lg sm:text-xl text-[#484848] font-poppins font-medium capitalize mb-1">
-        high quality
-      </h4>
-      <span className="text-sm sm:text-base text-[#484848] font-poppins font-normal">
-        crafted from top materials
-      </span>
-    </div>
-  </div>
+            <div className="flex items-center gap-3">
+              <button>
+                <FaHandHoldingHeart className="text-black text-4xl sm:text-5xl" />
+              </button>
+              <div>
+                <h4 className="text-lg sm:text-xl text-[#484848] font-poppins font-medium capitalize mb-1">
+                  high quality
+                </h4>
+                <span className="text-sm sm:text-base text-[#484848] font-poppins font-normal">
+                  crafted from top materials
+                </span>
+              </div>
+            </div>
 
-  <div className="flex items-center gap-3">
-    <button>
-      <FaAward className="text-black text-4xl sm:text-5xl" />
-    </button>
-    <div>
-      <h4 className="text-lg sm:text-xl text-[#484848] font-poppins font-medium capitalize mb-1">
-        warranty
-      </h4>
-      <span className="text-sm sm:text-base text-[#484848] font-poppins font-normal">
-        over 2 years
-      </span>
-    </div>
-  </div>
+            <div className="flex items-center gap-3">
+              <button>
+                <FaAward className="text-black text-4xl sm:text-5xl" />
+              </button>
+              <div>
+                <h4 className="text-lg sm:text-xl text-[#484848] font-poppins font-medium capitalize mb-1">
+                  warranty
+                </h4>
+                <span className="text-sm sm:text-base text-[#484848] font-poppins font-normal">
+                  over 2 years
+                </span>
+              </div>
+            </div>
 
-  <div className="flex items-center gap-3">
-    <button>
-      <FaShippingFast className="text-black text-4xl sm:text-5xl" />
-    </button>
-    <div>
-      <h4 className="text-lg sm:text-xl text-[#484848] font-poppins font-medium capitalize mb-1">
-        free shipping
-      </h4>
-      <span className="text-sm sm:text-base text-[#484848] font-poppins font-normal">
-        order over 150 $
-      </span>
-    </div>
-  </div>
+            <div className="flex items-center gap-3">
+              <button>
+                <FaShippingFast className="text-black text-4xl sm:text-5xl" />
+              </button>
+              <div>
+                <h4 className="text-lg sm:text-xl text-[#484848] font-poppins font-medium capitalize mb-1">
+                  free shipping
+                </h4>
+                <span className="text-sm sm:text-base text-[#484848] font-poppins font-normal">
+                  order over 150 $
+                </span>
+              </div>
+            </div>
 
-  <div className="flex items-center gap-3">
-    <button>
-      <IoCall className="text-black text-4xl sm:text-5xl" />
-    </button>
-    <div>
-      <h4 className="text-lg sm:text-xl text-[#484848] font-poppins font-medium capitalize mb-1">
-        24/7 support
-      </h4>
-      <span className="text-sm sm:text-base text-[#484848] font-poppins font-normal">
-        dedicated support
-      </span>
-    </div>
-  </div>
-</div>
-
+            <div className="flex items-center gap-3">
+              <button>
+                <IoCall className="text-black text-4xl sm:text-5xl" />
+              </button>
+              <div>
+                <h4 className="text-lg sm:text-xl text-[#484848] font-poppins font-medium capitalize mb-1">
+                  24/7 support
+                </h4>
+                <span className="text-sm sm:text-base text-[#484848] font-poppins font-normal">
+                  dedicated support
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
