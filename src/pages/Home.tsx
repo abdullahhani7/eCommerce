@@ -6,10 +6,8 @@ import FollowUs from "@components/Home/FollowUs";
 import NewArrival from "@components/Home/NewArrival";
 import Newsletter from "@components/Home/Newsletter";
 import Testimonial from "@components/Home/Testimonial";
-import { useAppSelector } from "@store/hooks";
 
 const Home = () => {
-  const { records, loading } = useAppSelector((state) => state.products);
   return (
     <div>
       <div>
@@ -20,7 +18,7 @@ const Home = () => {
       </div>
 
       <div>
-        <NewArrival products={records} loading={loading} />
+        <NewArrival />
       </div>
       <div>
         <Blinder />
