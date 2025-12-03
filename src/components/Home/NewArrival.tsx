@@ -1,7 +1,4 @@
- 
- 
-
-const NewArrival = ( ) => {
+const NewArrival = () => {
   const newArrivalsCategories = [
     {
       id: 1,
@@ -45,7 +42,7 @@ const NewArrival = ( ) => {
         </div>
 
         {/* categories  */}
-        <div className="flex items-center justify-center gap-10 mb-10">
+        <div className="flex items-center justify-center gap-10 mb-10 flex-wrap">
           {newArrivalsCategories.map((item, index) => (
             <button
               className={`text-base font-poppins font-normal capitalize cursor-pointer ${
@@ -62,8 +59,6 @@ const NewArrival = ( ) => {
             </button>
           ))}
         </div>
-
-       
       </div>
     </div>
   );
