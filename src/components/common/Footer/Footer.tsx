@@ -2,12 +2,12 @@ import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-white pt-[30px] pb-5 border-t border-[#d9d9d9]">
+    <div className="w-full   bg-white pt-[30px] pb-2 border-t border-[#d9d9d9] mt-auto">
       <div className="lg:container mx-auto">
         {/* TOP SECTION */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between pb-6 gap-6 lg:gap-0">
           {/* logo */}
-          <div className="logo_wrapper " >
+          <div className="logo_wrapper ">
             <Link to={"/"} className="no-underline!">
               <h3 className="text-2xl text-[#484848]! font-normal">Our eCom</h3>
             </Link>

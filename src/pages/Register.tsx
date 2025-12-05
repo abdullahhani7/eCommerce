@@ -24,7 +24,7 @@ const Register = () => {
   return (
     <>
       <Heading title="User Registration" />
-      <Row>
+      <Row style={{marginBottom:"50px"}}>
         <Col md={{ span: 6, offset: 3 }}>
           <Form onSubmit={handleSubmit(submitForm)}>
             <Input
