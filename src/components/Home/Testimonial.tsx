@@ -40,9 +40,9 @@ const Testimonial = () => {
             this is what our customers say
           </h3>
           <p className="text-base text-[#8a8a8a] font-poppins font-normal max-w-[614px] w-full text-center">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit qui
-            nulla iste laboriosam velit reiciendis veniam laudantium mollitia,
-            animi ea.
+            From everyday essentials to statement pieces, our customers aren’t
+            just buying clothes—they’re embracing confidence, comfort, and a
+            look that’s truly their own. Hear it straight from them.
           </p>
         </div>
 
@@ -92,8 +92,8 @@ const Testimonial = () => {
                 </div>
                 <div className="flex flex-col gap-6">
                   <p className="text-base text-black font-poppins font-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                    facere illum nostrum, repellat totam animi?
+                    “I’ve never felt more confident in my workwear. The fit is
+                    impeccable, and the quality? Unbeatable. Worth every penny.”
                   </p>
                   <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
@@ -101,7 +101,7 @@ const Testimonial = () => {
                     ))}
                   </span>
                   <h4 className="text-4xl text-[#484848] font-normal capitalize">
-                    james k.
+                   Elena R.
                   </h4>
                   <span className="text-base text-[#484848] font-poppins font-normal capitalize">
                     Traveler
@@ -121,8 +121,9 @@ const Testimonial = () => {
                 </div>
                 <div className="flex flex-col gap-6">
                   <p className="text-base text-black font-poppins font-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                    facere illum nostrum, repellat totam animi?
+                    “As a frequent traveler, I need clothes that look great and
+                    feel comfortable. This collection exceeded all my
+                    expectations.”
                   </p>
                   <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
@@ -139,7 +140,7 @@ const Testimonial = () => {
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className="flex items-center justify-between p-8 bg-white shadow-2xl min-w-[764px] w-full min-h-[400px] h-full roundel-lg gap-10">
                 <div className="relative max-w-[242px] w-full min-h-[242px] h-full testimonial_img">
                   <img
@@ -150,8 +151,9 @@ const Testimonial = () => {
                 </div>
                 <div className="flex flex-col gap-6">
                   <p className="text-base text-black font-poppins font-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                    facere illum nostrum, repellat totam animi?
+                    "As someone who’s always on the go, I need outfits that are
+                    both stylish and comfortable—this collection nailed it
+                    perfectly!"
                   </p>
                   <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
@@ -166,21 +168,22 @@ const Testimonial = () => {
                   </span>
                 </div>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
 
             <SwiperSlide>
               <div className="flex items-center justify-between p-8 bg-white shadow-2xl min-w-[764px] w-full min-h-[400px] h-full roundel-lg gap-10">
                 <div className="relative max-w-[242px] w-full min-h-[242px] h-full testimonial_img">
                   <img
                     className="max-w-[242px] w-full min-h-[242px] h-full object-cover relative z-10"
-                    src="/customers/customer_2.png"
+                    src="/customers/customer_5.png"
                     alt="customer one"
                   />
                 </div>
                 <div className="flex flex-col gap-6">
                   <p className="text-base text-black font-poppins font-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                    facere illum nostrum, repellat totam animi?
+                    "I travel weekly for work, and this line has become my
+                    go-to. Looks polished, feels like loungewear—what more could
+                    I ask for?"
                   </p>
                   <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
@@ -188,16 +191,16 @@ const Testimonial = () => {
                     ))}
                   </span>
                   <h4 className="text-4xl text-[#484848] font-normal capitalize">
-                    joshon.
+                   Sarah M.
                   </h4>
                   <span className="text-base text-[#484848] font-poppins font-normal capitalize">
-                    Ceo
+                    Digital Nomad
                   </span>
                 </div>
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className="flex items-center justify-between p-8 bg-white shadow-2xl min-w-[764px] w-full min-h-[400px] h-full roundel-lg gap-10">
                 <div className="relative max-w-[242px] w-full min-h-[242px] h-full testimonial_img">
                   <img
@@ -208,8 +211,9 @@ const Testimonial = () => {
                 </div>
                 <div className="flex flex-col gap-6">
                   <p className="text-base text-black font-poppins font-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                    facere illum nostrum, repellat totam animi?
+                    "Honestly exceeded my expectations. The pieces are
+                    versatile, soft, and still look put-together after a long
+                    flight."
                   </p>
                   <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
@@ -224,21 +228,22 @@ const Testimonial = () => {
                   </span>
                 </div>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
 
             <SwiperSlide>
               <div className="flex items-center justify-between p-8 bg-white shadow-2xl min-w-[764px] w-full min-h-[400px] h-full roundel-lg gap-10">
                 <div className="relative max-w-[242px] w-full min-h-[242px] h-full testimonial_img">
                   <img
                     className="max-w-[242px] w-full min-h-[242px] h-full object-cover relative z-10"
-                    src="/customers/customer_2.png"
+                    src="/customers/customer_4.png"
                     alt="customer one"
                   />
                 </div>
                 <div className="flex flex-col gap-6">
                   <p className="text-base text-black font-poppins font-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                    facere illum nostrum, repellat totam animi?
+                    "Finally, travel-friendly clothing that doesn’t sacrifice
+                    style! I’ve gotten so many compliments—even straight off a
+                    10-hour flight."
                   </p>
                   <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
@@ -246,10 +251,10 @@ const Testimonial = () => {
                     ))}
                   </span>
                   <h4 className="text-4xl text-[#484848] font-normal capitalize">
-                    john j.
+                  James K.
                   </h4>
                   <span className="text-base text-[#484848] font-poppins font-normal capitalize">
-                    Ceo
+                   Business Traveler
                   </span>
                 </div>
               </div>
@@ -260,14 +265,14 @@ const Testimonial = () => {
                 <div className="relative max-w-[242px] w-full min-h-[242px] h-full testimonial_img">
                   <img
                     className="max-w-[242px] w-full min-h-[242px] h-full object-cover relative z-10"
-                    src="/customers/customer_1.png"
+                    src="/customers/customer_6.png"
                     alt="customer one"
                   />
                 </div>
                 <div className="flex flex-col gap-6">
                   <p className="text-base text-black font-poppins font-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                    facere illum nostrum, repellat totam animi?
+                    "Perfect for frequent travelers like me—wrinkle-resistant,
+                    breathable, and still looks sharp in meetings or dinners."
                   </p>
                   <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
@@ -275,10 +280,10 @@ const Testimonial = () => {
                     ))}
                   </span>
                   <h4 className="text-4xl text-[#484848] font-normal capitalize">
-                    john j.
+                   Marcus T.
                   </h4>
                   <span className="text-base text-[#484848] font-poppins font-normal capitalize">
-                    Ceo
+                    Startup Founder
                   </span>
                 </div>
               </div>
@@ -289,14 +294,15 @@ const Testimonial = () => {
                 <div className="relative max-w-[242px] w-full min-h-[242px] h-full testimonial_img">
                   <img
                     className="max-w-[242px] w-full min-h-[242px] h-full object-cover relative z-10"
-                    src="/customers/customer_2.png"
+                    src="/customers/customer_3.png"
                     alt="customer one"
                   />
                 </div>
                 <div className="flex flex-col gap-6">
                   <p className="text-base text-black font-poppins font-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                    facere illum nostrum, repellat totam animi?
+                    "I packed three pieces from this collection for a two-week
+                    trip, and they were the only clothes I wanted to wear.
+                    Comfort meets class!"
                   </p>
                   <span className="flex items-center gap-1.5 pb-5 border-b  border-[#484848] max-w-[230px] w-full">
                     {[...Array(5)]?.map((_, index) => (
@@ -304,10 +310,10 @@ const Testimonial = () => {
                     ))}
                   </span>
                   <h4 className="text-4xl text-[#484848] font-normal capitalize">
-                    joshon.
+                  Daniel L.
                   </h4>
                   <span className="text-base text-[#484848] font-poppins font-normal capitalize">
-                    Ceo
+                   Remote Team Lead
                   </span>
                 </div>
               </div>
