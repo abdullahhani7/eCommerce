@@ -33,7 +33,7 @@ const Loading = ({
   }
   if (loading === "failed") {
     return (
-      <div>
+      <div style={{paddingBottom:"90px"}}>
         <LottieHandler type="error" message={error as string} />
       </div>
     );

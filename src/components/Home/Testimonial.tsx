@@ -39,7 +39,7 @@ const Testimonial = () => {
           <h3 className="text-5xl text-[#484848] font-normal capitalize mb-5">
             this is what our customers say
           </h3>
-          <p className="text-base text-[#8a8a8a] font-poppins font-normal max-w-[614px] w-full">
+          <p className="text-base text-[#8a8a8a] font-poppins font-normal max-w-[614px] w-full text-center">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit qui
             nulla iste laboriosam velit reiciendis veniam laudantium mollitia,
             animi ea.
