@@ -3,7 +3,7 @@ import Blinder from "@components/Home/Blinder";
 import Brand from "@components/Home/Brand";
 import FollowUs from "@components/Home/FollowUs";
 // import Deal from "@components/Home/Deal";
-import NewArrival from "@components/Home/NewArrival";
+// import NewArrival from "@components/Home/NewArrival";
 import Newsletter from "@components/Home/Newsletter";
 import Testimonial from "@components/Home/Testimonial";
 
