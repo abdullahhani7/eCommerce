@@ -28,8 +28,7 @@ const Blinder = () => {
               description
             </span>
             <p className="text-base text-[#767676] font-poppins font-normal mb-5 max-w-[515px] w-full">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              pariatur perspiciatis, rem iusto hic nihil!
+             Elevate your wardrobe with this sharp, vintage-inspired suit set. Crafted from premium wool blend, it features a tailored blazer, high-waisted trousers, and a crisp white shirt
             </p>
             <p className="text-base text-[#767676] font-poppins font-normal capitalize">
               size:{" "}

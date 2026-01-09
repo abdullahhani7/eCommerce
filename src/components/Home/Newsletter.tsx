@@ -18,9 +18,9 @@ const Newsletter = () => {
               subscribe to our newsletter
             </h1>
             <p className="text-base text-[#8a8a8a] font-poppins font-normal text-center max-w-[614px] w-full">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              porro nihil at sunt asperiores dolorum voluptates nam, numquam
-              praesentium nisi.
+             Be the first to know about new arrivals, exclusive offers, and style tips. Join over 50,000 fashion lovers who trust us to keep them ahead of the curve.
+
+
             </p>
 
             <form className="w-full flex flex-col gap-6">

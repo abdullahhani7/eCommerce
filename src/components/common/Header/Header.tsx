@@ -45,7 +45,7 @@ const Header = () => {
                 Categories
               </Nav.Link>
               <Nav.Link as={NavLink} to="about-us">
-                About
+                About Us
               </Nav.Link>
             </Nav>
             <Nav>
