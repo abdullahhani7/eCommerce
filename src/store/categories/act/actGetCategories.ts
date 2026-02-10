@@ -12,6 +12,8 @@ const actGetCategories = createAsyncThunk(
 
     try {
       const response = await api.get<TResponse>("/categories", { signal });
+      // console.log("response.data",response);
+      
       return response.data;
     } catch (error) {
       return rejectWithValue(axiosErrorHandler(error));

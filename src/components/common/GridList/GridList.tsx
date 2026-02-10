@@ -14,21 +14,22 @@ const GridList = <T extends HasId>({
   renderItem,
   emptyMessage,
 }: TGridListProps<T>) => {
-  const categoriesList =
-    records.length > 0 ? (
-      records.map((record) => (
-        <Col
-          key={record.id}
-          xs={6}
-          md={3}
-          className="d-flex justify-content-center mb-5 mt-2"
-        >
-          {renderItem(record)}
-        </Col>
-      ))
-    ) : (
-      <LottieHandler type="empty" message={emptyMessage} />
-    );
+ const categoriesList =
+  Array.isArray(records) && records.length > 0 ? (
+    records.map((record) => (
+      <Col
+        key={record.id}
+        xs={6}
+        md={3}
+        className="d-flex justify-content-center mb-5 mt-2"
+      >
+        {renderItem(record)}
+      </Col>
+    ))
+  ) : (
+    <LottieHandler type="empty" message={emptyMessage} />
+  );
+
   return <Row>{categoriesList}</Row>;
 };
 
