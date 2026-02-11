@@ -1,69 +1,35 @@
-# React + TypeScript + Vite
+# E-Commerce Pro - High-Performance React Storefront
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-grade e-commerce web application built for scalability, type safety, and advanced state management. It offers a complete shopping workflow from dynamic product discovery to cart and wishlist management, optimized for high performance.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+E-Commerce Pro allows users to browse products, manage their shopping cart and wishlist, place orders, and experience a fast, responsive UI. The project emphasizes modern React architecture, TypeScript, and optimized state management with Redux Toolkit.
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Dynamic Product Catalog:** Advanced filtering and category-based sorting.  
+- **Persistent Shopping Cart:** Cart state persists across sessions with real-time total calculations.  
+- **Wishlist System:** Interactive "Like/Dislike" for favorite products.  
+- **User Profiles & Orders:** Comprehensive order placement workflow and profile management.  
+- **State Management:** Powered by Redux Toolkit with Redux Persist and Reselect for optimized performance.  
+- **Performance Optimization:** Lazy loading, memoized selectors, and minimal re-renders.  
+- **Multi-Language & Dark Mode:** Full i18n support and theme switching.  
+- **Smooth UX:** Skeleton loaders and toast notifications for seamless feedback.  
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend:** React.js (Vite), TypeScript  
+- **State Management:** Redux Toolkit, Redux Persist, Reselect  
+- **Forms & Validation:** React Hook Form + Zod  
+- **Data Fetching:** Axios  
+- **Routing:** React Router DOM  
+- **Styling:** Tailwind CSS / Bootstrap  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clone the repository:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+git clone https://github.com/abdullahhani7/eCommerce
+cd eCommerce
